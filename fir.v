@@ -1,4 +1,4 @@
-(*use_dsp = "no"*)module fir  //test//
+(*use_dsp = "no"*)module fir  //test github//
 #(  parameter pADDR_WIDTH = 12,
     parameter pDATA_WIDTH = 32,
     parameter Tape_Num    = 11
