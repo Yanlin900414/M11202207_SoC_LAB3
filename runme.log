@@ -1,0 +1,222 @@
+
+*** Running vivado
+    with args -log fir.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source fir.tcl
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source fir.tcl -notrace
+WARNING: [Project 1-153] The current project device 'xc7z020clg400-1' does not match with the device on the 'XILINX.COM:ZCU104:PART0:1.1' board part. A device change to match the device on 'XILINX.COM:ZCU104:PART0:1.1' board part is being done. Please upgrade the IP in the project via the upgrade_ip command or by selecting Reports => Reports IP Status.
+INFO: [Project 1-152] Project part set to zynquplus (xczu7ev-ffvc1156-2-e)
+Command: read_checkpoint -auto_incremental -incremental /home/ubuntu/course-lab_3/fir/fir.srcs/utils_1/imports/synth_1/fir.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/ubuntu/course-lab_3/fir/fir.srcs/utils_1/imports/synth_1/fir.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top fir -part xc7z020clg400-1 -flatten_hierarchy none -directive RuntimeOptimized -fsm_extraction off
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 3357
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2903.078 ; gain = 0.000 ; free physical = 9031 ; free virtual = 12138
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'fir' [/home/ubuntu/course-lab_3/fir/fir.srcs/sources_1/imports/lab-fir/fir/rtl/fir.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'fir' (0#1) [/home/ubuntu/course-lab_3/fir/fir.srcs/sources_1/imports/lab-fir/fir/rtl/fir.v:1]
+WARNING: [Synth 8-6014] Unused sequential element buff_4_reg was removed.  [/home/ubuntu/course-lab_3/fir/fir.srcs/sources_1/imports/lab-fir/fir/rtl/fir.v:458]
+WARNING: [Synth 8-6014] Unused sequential element buff_2_reg was removed.  [/home/ubuntu/course-lab_3/fir/fir.srcs/sources_1/imports/lab-fir/fir/rtl/fir.v:494]
+WARNING: [Synth 8-6014] Unused sequential element buff_3_reg was removed.  [/home/ubuntu/course-lab_3/fir/fir.srcs/sources_1/imports/lab-fir/fir/rtl/fir.v:498]
+WARNING: [Synth 8-7129] Port ss_tvalid in module fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sm_tready in module fir is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2903.078 ; gain = 0.000 ; free physical = 9142 ; free virtual = 12257
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2903.078 ; gain = 0.000 ; free physical = 9142 ; free virtual = 12257
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2903.078 ; gain = 0.000 ; free physical = 9142 ; free virtual = 12257
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2903.078 ; gain = 0.000 ; free physical = 9142 ; free virtual = 12257
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/ubuntu/course-lab_3/fir/fir.srcs/constrs_2/new/fir.xdc]
+Finished Parsing XDC File [/home/ubuntu/course-lab_3/fir/fir.srcs/constrs_2/new/fir.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2935.094 ; gain = 0.000 ; free physical = 9048 ; free virtual = 12176
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2935.094 ; gain = 0.000 ; free physical = 9048 ; free virtual = 12177
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 2935.094 ; gain = 32.016 ; free physical = 9111 ; free virtual = 12240
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 2935.094 ; gain = 32.016 ; free physical = 9111 ; free virtual = 12240
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 2935.094 ; gain = 32.016 ; free physical = 9111 ; free virtual = 12240
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'bram_tap_A_reg' [/home/ubuntu/course-lab_3/fir/fir.srcs/sources_1/imports/lab-fir/fir/rtl/fir.v:556]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_tap_Di_reg' [/home/ubuntu/course-lab_3/fir/fir.srcs/sources_1/imports/lab-fir/fir/rtl/fir.v:121]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 2935.094 ; gain = 32.016 ; free physical = 9106 ; free virtual = 12237
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               12 Bit    Registers := 1     
+	                4 Bit    Registers := 6     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 12    
++---Multipliers : 
+	              32x32  Multipliers := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 4     
+	   4 Input   32 Bit        Muxes := 2     
+	  12 Input   32 Bit        Muxes := 1     
+	   2 Input   12 Bit        Muxes := 5     
+	   4 Input    4 Bit        Muxes := 3     
+	  15 Input    4 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 23    
+	   4 Input    1 Bit        Muxes := 12    
+	  12 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3332] Sequential element (bram_tap_A_reg[11]) is unused and will be removed from module fir.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 2935.094 ; gain = 32.016 ; free physical = 9082 ; free virtual = 12222
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 2935.094 ; gain = 32.016 ; free physical = 8963 ; free virtual = 12111
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 2935.094 ; gain = 32.016 ; free physical = 8947 ; free virtual = 12096
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 2935.094 ; gain = 32.016 ; free physical = 8946 ; free virtual = 12095
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 2935.094 ; gain = 32.016 ; free physical = 8946 ; free virtual = 12095
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 2935.094 ; gain = 32.016 ; free physical = 8946 ; free virtual = 12095
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |CARRY4 |    77|
+|3     |LUT1   |     2|
+|4     |LUT2   |   258|
+|5     |LUT3   |   119|
+|6     |LUT4   |   113|
+|7     |LUT5   |    42|
+|8     |LUT6   |   397|
+|9     |FDRE   |    99|
+|10    |FDSE   |     1|
+|11    |LD     |    39|
+|12    |IBUF   |   153|
+|13    |OBUF   |   169|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 2935.094 ; gain = 32.016 ; free physical = 8946 ; free virtual = 12095
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 2935.094 ; gain = 0.000 ; free physical = 9000 ; free virtual = 12149
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 2935.102 ; gain = 32.016 ; free physical = 9000 ; free virtual = 12149
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2935.102 ; gain = 0.000 ; free physical = 9092 ; free virtual = 12241
+INFO: [Netlist 29-17] Analyzing 116 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'fir' is not ideal for floorplanning, since the cellview 'fir' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2935.102 ; gain = 0.000 ; free physical = 9038 ; free virtual = 12187
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 39 instances were transformed.
+  LD => LDCE: 39 instances
+
+Synth Design complete, checksum: 5415bb41
+INFO: [Common 17-83] Releasing license: Synthesis
+23 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:44 . Memory (MB): peak = 2935.102 ; gain = 32.023 ; free physical = 9237 ; free virtual = 12386
+INFO: [Common 17-1381] The checkpoint '/home/ubuntu/course-lab_3/fir/fir.runs/synth_1/fir.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file fir_utilization_synth.rpt -pb fir_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 19 02:41:45 2023...
