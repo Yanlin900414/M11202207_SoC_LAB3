@@ -1,4 +1,4 @@
-(*use_dsp = "no"*)module fir 
+(*use_dsp = "no"*)module fir  
 #(  parameter pADDR_WIDTH = 12,
     parameter pDATA_WIDTH = 32,
     parameter Tape_Num    = 11
